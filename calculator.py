@@ -38,3 +38,6 @@ class calculate:
             return self.power()
         else:
             return "Invalid function name"
+
+# f = calculate(2, 3, "add")
+# print(f.calculate_function())
