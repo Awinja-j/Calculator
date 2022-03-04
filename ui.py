@@ -1,10 +1,11 @@
+import re
 from tkinter import *
-execfile("calculator.py")
+exec(open("calculator.py").read())
 
 
 win = Tk() # This is to create a basic window
 win.geometry("320x330")  # this is for the size of the window 
-win.resizable(0, 0)  # this is to prevent from resizing the window
+# win.resizable(0, 0)  # this is to prevent from resizing the window
 win.title("Calculator")
 
 ###################Starting with functions ####################
@@ -30,13 +31,14 @@ def bt_clear():
  
 def bt_equal():
     global expression
+    list_e = re.split('(\W)', expression)
     from calculator import calculate
-    c = calculate(expression)
+    c = calculate(int(list_e[0]), list_e[1], int(list_e[2]))
     result = str(c.calculate_function())
     input_text.set(result)
     expression = ""
  
-expression = ""
+expression =""
  
 # 'StringVar()' :It is used to get the instance of input field
  

@@ -1,5 +1,5 @@
 class calculate:
-    def __init__(self, x, y, function_name) -> None:
+    def __init__(self, x, function_name, y) -> None:
         self.x = x
         self.y = y
         self.function_name = function_name
@@ -20,24 +20,15 @@ class calculate:
     def divide(self):
         return self.x / self.y
 
-    # This fucntion gets the power of two numbers
-    def power(self):
-        return self.x ** self.y
-
     # This function takes in a function name and calls the function
     def calculate_function(self):
-        if self.function_name == "add":
+        if self.function_name == "+":
             return self.add()
-        elif self.function_name == "subtract":
+        elif self.function_name == "-":
             return self.subtract()
-        elif self.function_name == "multiply":
+        elif self.function_name == "*":
             return self.multiply()
-        elif self.function_name == "divide":
+        elif self.function_name == "/":
             return self.divide()
-        elif self.function_name == "power":
-            return self.power()
         else:
             return "Invalid function name"
-
-# f = calculate(2, 3, "add")
-# print(f.calculate_function())
