@@ -37,3 +37,6 @@ install Tkinter
 ### cd Calculator
 
 ```python3 ui.py```
+
+![alt text](https://github.com/Awinja-j/Calculator/blob/main/calc.png)
+
